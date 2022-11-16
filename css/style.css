@@ -73,3 +73,25 @@ body{
     font-size: 12px;
     color: rgba(111, 159, 200, 1);
 }
+.cerca_chat {
+    width: 100%;
+    background-color: rgba(234, 234, 234, 1);
+    padding: .5rem;
+    display: flex;
+    
+    align-items: center;
+}
+.input_cerca{
+    width: 100%;
+    padding: .5rem;
+    border: none;
+}
+.cerca_chat > div{
+    
+    background-color: white;
+    padding: .5rem;
+    border-right:1px solid gray gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
