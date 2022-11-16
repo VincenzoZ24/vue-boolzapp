@@ -9,13 +9,16 @@ body{
    flex-direction: column;
    justify-content: center;
    background-color: rgba(219, 219, 211, 1);
+   position: relative;
 }
+
 .container{
     max-width: 1200px;
     height: 80vh;
     margin: auto;
     background-color: white;
     display: flex;
+   
 }
 .container_profili{
     height: 100%;
@@ -50,4 +53,23 @@ body{
 }
 .icon_bar_profilo i{
     margin-right: .5rem;
+}
+.notifiche{
+    width: 100%;
+    padding: .8rem;
+    background-color: rgba(142, 218, 252, 1);
+    display: flex;
+    align-items: center;
+}
+.icon_notifica{
+    border-radius: 100%;
+    background-color: white;
+    padding: 1rem;
+    font-size: 20px;
+    color:  rgba(142, 218, 252, 1);
+    margin-right: .5rem;
+}
+.notifica_desk{
+    font-size: 12px;
+    color: rgba(111, 159, 200, 1);
 }
