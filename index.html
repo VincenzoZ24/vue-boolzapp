@@ -45,7 +45,12 @@
                     
                     <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat">
                 </div>
-               
+                <div class="anteprima_chat_utente">
+                    <div class="chat_left_utente" v-for="(img, indice ) in contacts ">
+                        <img :src="img.avatar" alt="">
+                    </div>
+                </div>
+            
                 
 
             </div>

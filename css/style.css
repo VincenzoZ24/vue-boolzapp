@@ -95,3 +95,20 @@ body{
     align-items: center;
     justify-content: center;
 }
+.anteprima_chat_utente{
+    overflow: auto;
+    height: 500px;
+}
+.chat_left_utente{
+    width: 100%;
+    border-bottom: 1px solid rgba(245, 245, 245, 1);
+    padding: .5rem;
+}
+.chat_left_utente:hover{
+    background-color: rgba(233, 235, 235, 1);
+}
+.chat_left_utente img{
+    width: 50px;
+    border-radius: 100%;
+   
+}
