@@ -70,9 +70,10 @@
                     </div>
                     
                 </div>
-                <div class="messaggi" v-for="(message , i) in contacts[chatPrincipale].messages">
+                <div class="messaggi" v-for="message  in contacts[chatPrincipale].messages" :class="message.status">
                     {{message.message}}
                 </div>
+                <div class="bar_bottom_chat"></div>
                 
             </div>
         </div>
