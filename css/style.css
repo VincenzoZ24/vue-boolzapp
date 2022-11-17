@@ -154,7 +154,9 @@ body{
 .received{
     background-color: rgba(255, 255, 255, 1);
     margin-right: auto;
+    margin-left: 5rem;
 }
 .sent{
     margin-left: auto;
+    
 }
