@@ -165,6 +165,7 @@ new Vue({
             }
         ],
         chatPrincipale: 0,
+        
     },
     methods: {
         vediChat(index){
