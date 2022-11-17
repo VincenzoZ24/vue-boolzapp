@@ -114,7 +114,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 100%;
-    
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
 }
 .chat_left_utente img{
     width: 50px;

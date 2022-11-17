@@ -70,8 +70,8 @@
                     </div>
                     
                 </div>
-                <div class="messaggi" v-for="(message , i) in 2">
-                    {{contacts[chatPrincipale].messages[i].message}}
+                <div class="messaggi" v-for="(message , i) in contacts[chatPrincipale].messages">
+                    {{message.message}}
                 </div>
                 
             </div>
