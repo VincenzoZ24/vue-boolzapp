@@ -109,9 +109,32 @@ body{
 .chat_left_utente:hover{
     background-color: rgba(233, 235, 235, 1);
 }
+.container_chat{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 .chat_left_utente img{
     width: 50px;
     border-radius: 100%;
     margin-right: .5rem;
    
+}
+.bar_chat_principale img{
+    width: 50px;
+    border-radius: 100%;
+    margin-right: .5rem;
+    
+}
+.bar_chat_principale{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem;
+    background-color: rgba(234, 234, 234, 1);
+}
+.left_chat_principale{
+    display: flex;
+    align-items: center;
 }

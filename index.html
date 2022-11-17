@@ -46,9 +46,9 @@
                     <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat">
                 </div>
                 <div class="anteprima_chat_utente">
-                    <div class="chat_left_utente" v-for="(img, indice ) in contacts ">
-                        <img :src="img.avatar" alt="">
-                        <h4>{{ img.name }}</h4>
+                    <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)">
+                        <img :src="chat.avatar" alt="">
+                        <h4>{{ chat.name }}</h4>
                     </div>
                 </div>
             
@@ -57,7 +57,23 @@
             </div>
             <!-- chat container -->
             <div class="container_chat">
-
+                <div class="bar_chat_principale">
+                    <div class="left_chat_principale">
+                        <img :src="contacts[chatPrincipale].avatar" alt="">
+                        {{contacts[chatPrincipale].name}}
+                    </div>
+                   
+                    <div class="icon_bar_profilo">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <i class="fa-solid fa-paperclip"></i>
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    
+                </div>
+                <div class="messaggi">
+                    {{contacts[chatPrincipale].messages[1].message}}
+                </div>
+                
             </div>
         </div>
     </div>
