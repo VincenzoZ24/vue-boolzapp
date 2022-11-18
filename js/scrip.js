@@ -174,14 +174,22 @@ new Vue({
         },
         inviaMessage() {
             this.contacts[this.chatPrincipale].messages.push({
+                
                 message: this.nuovoMessaggio,
                 status: 'sent',
-                
+
             });
-            
-        this.nuovoMessaggio= "";
-            
-        }
+
+            this.nuovoMessaggio = "";
+            const receiverIndex = this.chatPrincipale;
+            setTimeout(() => {
+                this.contacts[receiverIndex].messages.push({
+                    message: "ok",
+                    status: "received",
+                });
+            }, 1500);
+        },
+       
     }
 
 })

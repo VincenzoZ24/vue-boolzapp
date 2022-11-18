@@ -158,10 +158,20 @@ body{
     background-color: rgba(255, 255, 255, 1);
     margin-right: auto;
     margin-left: 5rem;
+    display: block;
+    position: relative;
+    
 }
 .sent{
     margin-left: auto;
-    
+    display: block;
+    position: relative;
+}
+.messaggi > div{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 12px;
 }
 .bar_bottom_chat{
     margin-top: auto;
@@ -181,4 +191,8 @@ body{
 .bar_bottom_chat i{
     font-size: 20px ;
     color: rgba(107, 115, 118, 1);
+}
+.ultimo_accesso{
+    font-size: 12px;
+    color: rgba(177, 177, 177, 1);
 }

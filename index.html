@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
     <script src="js/scrip.js" defer></script>
 
 </head>
+
 <body>
     <div class="body_color"></div>
     <div id="root">
@@ -21,7 +24,7 @@
                         <img src="img/avatar_2.jpg" alt="">
                         Vincenzo
                     </div>
-                   
+
                     <div class="icon_bar_profilo">
                         <i class="fa-solid fa-rotate-right"></i>
                         <i class="fa-solid fa-message"></i>
@@ -36,25 +39,26 @@
                         <p>Ricevi notifiche di nuovi messaggi</p>
                         <p class="notifica_desk">Attiva notifiche desktop</p>
                     </div>
-                    
+
                 </div>
                 <div class="cerca_chat">
                     <div>
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
-                    
+
                     <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat">
                 </div>
                 <div class="anteprima_chat_utente">
                     <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)">
                         <img :src="chat.avatar" alt="">
                         <h4>{{ chat.name }}</h4>
+                        
                         <!-- impostare ultimo messaggio  -->
                         {{contacts[chatPrincipale].messages.message}}
                     </div>
                 </div>
-            
-                
+
+
 
             </div>
             <!-- chat container -->
@@ -62,27 +66,47 @@
                 <div class="bar_chat_principale">
                     <div class="left_chat_principale">
                         <img :src="contacts[chatPrincipale].avatar" alt="">
-                        {{contacts[chatPrincipale].name}}
+                        <div >
+                            <div>
+                                {{contacts[chatPrincipale].name}}
+                            </div>
+                        
+                           <div class="ultimo_accesso">
+                            ultimo accesso: {{contacts[chatPrincipale].messages[i].date}}
+                           </div>
+                            
+                        </div>
+                        
                     </div>
-                   
+
                     <div class="icon_bar_profilo">
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-paperclip"></i>
                         <i class="fa-solid fa-bars"></i>
                     </div>
-                    
+
                 </div>
                 <div class="messaggi" v-for="message  in contacts[chatPrincipale].messages" :class="message.status">
-                    {{message.message}}
+                    
+                        {{message.message}}
+                   
+                    
+                    <!-- <div >
+                        {{message.date}}
+                    </div> -->
+                    
+                    
                 </div>
                 <div class="bar_bottom_chat">
                     <i class="fa-regular fa-face-smile"></i>
-                    <input type="text" v-model="nuovoMessaggio" @keyup.enter="inviaMessage" placeholder="Scrivi un messaggio">
+                    <input type="text" v-model="nuovoMessaggio" @keyup.enter="inviaMessage"
+                        placeholder="Scrivi un messaggio">
                     <i class="fa-solid fa-microphone"></i>
                 </div>
-               
+
             </div>
         </div>
     </div>
 </body>
+
 </html>
