@@ -52,9 +52,12 @@
                     <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)">
                         <img :src="chat.avatar" alt="">
                         <h4>{{ chat.name }}</h4>
-                        
-                        <!-- impostare ultimo messaggio  -->
-                        {{contacts[chatPrincipale].messages.message}}
+                        <!-- ultimo messaggio  -->
+                        <div v-for=" message in contacts[chatPrincipale].messages">
+                            {{contacts[chatPrincipale].messages.message}}
+                        </div>
+                       
+                      
                     </div>
                 </div>
 

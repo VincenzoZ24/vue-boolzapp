@@ -177,9 +177,8 @@ new Vue({
                 
                 message: this.nuovoMessaggio,
                 status: 'sent',
-
+                setTimeout,
             });
-
             this.nuovoMessaggio = "";
             const receiverIndex = this.chatPrincipale;
             setTimeout(() => {
