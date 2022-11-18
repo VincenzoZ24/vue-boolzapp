@@ -191,7 +191,7 @@ new Vue({
         },
 
        verificaNomi(nameofuser){
-        return nameofuser.includes(this.cercaContatti);
+        return nameofuser.toUpperCase().includes(this.cercaContatti.toUpperCase());
         
        }
         
