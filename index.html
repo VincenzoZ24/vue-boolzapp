@@ -49,6 +49,8 @@
                     <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)">
                         <img :src="chat.avatar" alt="">
                         <h4>{{ chat.name }}</h4>
+                        <!-- impostare ultimo messaggio  -->
+                        {{contacts[chatPrincipale].messages.message}}
                     </div>
                 </div>
             
@@ -73,8 +75,12 @@
                 <div class="messaggi" v-for="message  in contacts[chatPrincipale].messages" :class="message.status">
                     {{message.message}}
                 </div>
-                <div class="bar_bottom_chat"></div>
-                
+                <div class="bar_bottom_chat">
+                    <i class="fa-regular fa-face-smile"></i>
+                    <input type="text" v-model="nuovoMessaggio" @keyup.enter="inviaMessage" placeholder="Scrivi un messaggio">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+               
             </div>
         </div>
     </div>

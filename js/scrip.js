@@ -165,12 +165,22 @@ new Vue({
             }
         ],
         chatPrincipale: 0,
-        i:0,
-       
+        i: 0,
+        nuovoMessaggio: "",
     },
     methods: {
-        vediChat(index){
+        vediChat(index) {
             this.chatPrincipale = index
+        },
+        inviaMessage() {
+            this.contacts[this.chatPrincipale].messages.push({
+                message: this.nuovoMessaggio,
+                status: 'sent',
+                
+            });
+            
+        this.nuovoMessaggio= "";
+            
         }
     }
 

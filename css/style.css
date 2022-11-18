@@ -12,13 +12,16 @@ body{
    position: relative;
 
 }
-
+#root{
+    padding: 1rem;
+}
 .container{
     max-width: 1200px;
     height: 80vh;
     margin: auto;
     background-color: white;
     display: flex;
+    
    
 }
 .container_profili{
@@ -159,4 +162,23 @@ body{
 .sent{
     margin-left: auto;
     
+}
+.bar_bottom_chat{
+    margin-top: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem;
+    background-color: rgba(243, 238, 234, 1);
+
+
+}
+.bar_bottom_chat input{
+    padding: .5rem;
+    width: 80%;
+    border: none;
+}
+.bar_bottom_chat i{
+    font-size: 20px ;
+    color: rgba(107, 115, 118, 1);
 }
