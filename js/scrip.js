@@ -189,6 +189,10 @@ new Vue({
                 });
             }, 1500);
         },
+
+       verificaNomi(){
+        cercaContatti.includes(contacts[i].name)
+       }
         
        
     }
