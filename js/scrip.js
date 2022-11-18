@@ -190,8 +190,9 @@ new Vue({
             }, 1500);
         },
 
-       verificaNomi(){
-        cercaContatti.includes(contacts[i].name)
+       verificaNomi(nameofuser){
+        return nameofuser.includes(this.cercaContatti);
+        
        }
         
        

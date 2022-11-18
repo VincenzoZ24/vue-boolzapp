@@ -49,7 +49,7 @@
                     <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat" v-model="cercaContatti">
                 </div>
                 <div class="anteprima_chat_utente">
-                    <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)">
+                    <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)" v-if="verificaNomi(chat.name)">
                         <img :src="chat.avatar" alt="">
                         <h4>{{ chat.name }}</h4>
                         <!-- ultimo messaggio  -->
