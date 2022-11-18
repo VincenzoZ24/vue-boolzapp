@@ -46,7 +46,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
 
-                    <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat">
+                    <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat" v-model="cercaContatti">
                 </div>
                 <div class="anteprima_chat_utente">
                     <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)">

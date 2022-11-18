@@ -167,6 +167,7 @@ new Vue({
         chatPrincipale: 0,
         i: 0,
         nuovoMessaggio: "",
+        cercaContatti:"",
     },
     methods: {
         vediChat(index) {
@@ -188,6 +189,7 @@ new Vue({
                 });
             }, 1500);
         },
+        
        
     }
 
