@@ -101,7 +101,7 @@ body{
 }
 .anteprima_chat_utente{
     overflow: auto;
-    height: 400px;
+    height: 60%;
 }
 .chat_left_utente{
     width: 100%;
