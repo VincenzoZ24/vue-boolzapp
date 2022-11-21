@@ -196,3 +196,7 @@ body{
     font-size: 12px;
     color: rgba(177, 177, 177, 1);
 }
+.ultimo_messaggio{
+    font-size: 12px;
+    margin-top: .5rem;
+}

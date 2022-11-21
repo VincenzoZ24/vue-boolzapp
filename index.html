@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
@@ -46,18 +46,23 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
 
-                    <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat" v-model="cercaContatti">
+                    <input class="input_cerca" type="text" placeholder="cerca o inizia una nuova chat"
+                        v-model="cercaContatti">
                 </div>
                 <div class="anteprima_chat_utente">
-                    <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)" v-if="verificaNomi(chat.name)">
+                    <div class="chat_left_utente" v-for="(chat, indice ) in contacts " @click="vediChat(indice)"
+                        v-if="verificaNomi(chat.name)">
                         <img :src="chat.avatar" alt="">
-                        <h4>{{ chat.name }}</h4>
-                        <!-- ultimo messaggio  -->
-                        <div v-for=" message in contacts[chatPrincipale].messages">
-                            {{contacts[chatPrincipale].messages.message}}
+                        <div>
+                            <h4>{{ chat.name }}</h4>
+                            <!-- ultimo messaggio  -->
+                            <div class="ultimo_messaggio">
+                                {{chat.messages[chat.messages.length - 1].message}}
+                            </div>
+                            
                         </div>
-                       
-                      
+
+
                     </div>
                 </div>
 
@@ -69,17 +74,17 @@
                 <div class="bar_chat_principale">
                     <div class="left_chat_principale">
                         <img :src="contacts[chatPrincipale].avatar" alt="">
-                        <div >
+                        <div>
                             <div>
                                 {{contacts[chatPrincipale].name}}
                             </div>
-                        
-                           <div class="ultimo_accesso">
-                            ultimo accesso: {{contacts[chatPrincipale].messages[i].date}}
-                           </div>
-                            
+
+                            <div class="ultimo_accesso">
+                                ultimo accesso: {{contacts[chatPrincipale].messages[i].date}}
+                            </div>
+
                         </div>
-                        
+
                     </div>
 
                     <div class="icon_bar_profilo">
@@ -90,15 +95,15 @@
 
                 </div>
                 <div class="messaggi" v-for="message  in contacts[chatPrincipale].messages" :class="message.status">
-                    
-                        {{message.message}}
-                   
-                    
+
+                    {{message.message}}
+
+
                     <!-- <div >
                         {{message.date}}
                     </div> -->
-                    
-                    
+
+
                 </div>
                 <div class="bar_bottom_chat">
                     <i class="fa-regular fa-face-smile"></i>
